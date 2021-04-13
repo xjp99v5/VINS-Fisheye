@@ -9,7 +9,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
 set(ENABLE_BACKWARD true)
 set(ENABLE_VWORKS false)
 set(DETECT_CUDA true)
-set("OpenCV_DIR"  "/usr/local/share/OpenCV/")
+SET("OpenCV_DIR"  "/usr/local/share/OpenCV/")
 
 find_package(OpenMP REQUIRED)
 
@@ -42,7 +42,11 @@ if(DETECT_CUDA)
         message("CUDA detected, automatically USE OpenCV with CUDA support")
         add_definitions(-D USE_CUDA)
         set(LIBSGM "sgm")
-        find_package(OpenCV 3 REQUIRED cudaimgproc)
+        find_package(OpenCV 3.4 REQUIRED
+        NO_MODULE #Should be optional, tells CMake to use config mode
+        PATHS /usr/local # Tells CMake to look here
+        NO_DEFAULT_PATH #and don't look anywhere else
+        )
     else()
         message(WARNING "CUDA not detected, automatically USE OpenCV with CUDA support")
         set(LIBSGM "")
@@ -58,9 +62,9 @@ endif()
 if(ENABLE_VWORKS)
     find_package(VisionWorks REQUIRED)
     #Set path to visionworks sample here
-    # include_directories(
-        # /home/xuhao/VisionWorks-1.6-Samples/nvxio/include
-    # )
+    include_directories(
+        /usr/share/visionworks/sources/nvxio/include
+    )
     # link_directories(/home/xuhao/VisionWorks-1.6-Samples/libs/x86_64/linux/release/)
     add_definitions(-DWITH_VWORKS)
 else()
