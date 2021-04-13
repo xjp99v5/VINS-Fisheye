@@ -1,7 +1,7 @@
 # VINS-Fisheye-PX4
 
 
-This project is a continous updated Fisheye version of [VINS-Fisheye].
+This project is a continous updated Fisheye version of [VINS-Fisheye](https://github.com/xuhao1/VINS-Fisheye).
 It gives a more comprehensive verison to build VINS-Fisheye in Jetson Xavier NX and get IMU data from  PX4 via MAVROS.
 
 
