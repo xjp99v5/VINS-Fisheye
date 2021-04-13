@@ -1,6 +1,10 @@
-# VINS-Fisheye
+# VINS-Fisheye-PX4
 
 This project is a continous updated Fisheye version of [VINS-Fisheye].
+I gives a more comprehensive verison to build VINS-Fisheye in Jetson Xavier NX and get IMU data from  PX4 via MAVROS.
+*Update 2021.04.13*
+[Install OpenCV 3.4.1 CUDA  in Jetson Xavier NX](https://www.jetsonhacks.com/2018/11/08/build-opencv-3-4-on-nvidia-jetson-agx-xavier-developer-kit/)
+
 
 *Update 2021.04.13*
 In line 45 changed to
@@ -13,7 +17,7 @@ In line 45 changed to
         """
 
 
-
+-------------------------------------------------
 
 # VINS-Fisheye
 This repository is a Fisheye version of [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) with GPU and Visionworks acceleration. It can run on Nvidia TX2 in real-time, also provide depth estimation based on fisheye.
