@@ -5,7 +5,7 @@
 imu: 1         
 num_of_cam: 1  
 
-imu_topic: "/djiros/imu"
+imu_topic: "/mavros/imu/data"
 image0_topic: "/stereo/left/image"
 image1_topic: "/stereo/right/image"
 output_path: "/home/dji/output/"
