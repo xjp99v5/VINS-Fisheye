@@ -1,20 +1,28 @@
 # VINS-Fisheye-PX4
 
+
 This project is a continous updated Fisheye version of [VINS-Fisheye].
-I gives a more comprehensive verison to build VINS-Fisheye in Jetson Xavier NX and get IMU data from  PX4 via MAVROS.
+It gives a more comprehensive verison to build VINS-Fisheye in Jetson Xavier NX and get IMU data from  PX4 via MAVROS.
+
+
 *Update 2021.04.13*
+
+
 [Install OpenCV 3.4.1 CUDA  in Jetson Xavier NX](https://www.jetsonhacks.com/2018/11/08/build-opencv-3-4-on-nvidia-jetson-agx-xavier-developer-kit/)
 
 
 *Update 2021.04.13*
+
+
 In line 45 changed to
-        """
+
+        ```
         find_package(OpenCV 3.4 REQUIRED
         NO_MODULE #Should be optional, tells CMake to use config mode
         PATHS /usr/local # Tells CMake to look here
         NO_DEFAULT_PATH #and don't look anywhere else
         )
-        """
+       ```
 
 
 -------------------------------------------------
