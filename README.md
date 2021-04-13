@@ -1,4 +1,21 @@
 # VINS-Fisheye
+
+This project is a continous updated Fisheye version of [VINS-Fisheye].
+
+*Update 2021.04.13*
+In line 45 changed to
+        """
+        find_package(OpenCV 3.4 REQUIRED
+        NO_MODULE #Should be optional, tells CMake to use config mode
+        PATHS /usr/local # Tells CMake to look here
+        NO_DEFAULT_PATH #and don't look anywhere else
+        )
+        """
+
+
+
+
+# VINS-Fisheye
 This repository is a Fisheye version of [VINS-Fusion](https://github.com/HKUST-Aerial-Robotics/VINS-Fusion) with GPU and Visionworks acceleration. It can run on Nvidia TX2 in real-time, also provide depth estimation based on fisheye.
 
 Only stereo visual-inertial-odometry is supported for fisheye cameras now. Loop closure module for fisheye camera will release later.
