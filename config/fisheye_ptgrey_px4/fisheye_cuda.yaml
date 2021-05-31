@@ -22,7 +22,7 @@ show_width: 1080
 fisheye_fov: 220
 
 enable_up_top: 1
-enable_down_top: 0
+enable_down_top: 1
 enable_up_side: 1
 enable_down_side: 1  
 enable_rear_side: 0
@@ -49,7 +49,7 @@ body_T_cam1: !!opencv-matrix
    data: [ 0.8699823027148352, -0.34447713538283514, 
        0.3527978120133772, -0.14769059861856132,
        0.38999091406730596, 0.9185338174110674, 
-       -0.06482833652961086, -0.27753973450119196
+       -0.06482833652961086, -0.27753973450119196,
        -0.3017248413835651, 0.1939874466832459, 
        0.9334511184959686, -0.29326485646664624, 0., 0., 0., 1. ]
 
@@ -80,8 +80,8 @@ multiple_thread: 1
 use_vxworks: 0
 use_gpu: 1
 
-enable_depth: 0 # If estimate depth cloud; only available for dual fisheye now
-rgb_depth_cloud: -1 # -1: point no texture,  0 depth cloud will be gray, 1 depth cloud will be colored;
+enable_depth: 1 # If estimate depth cloud; only available for dual fisheye now
+rgb_depth_cloud: 1 # -1: point no texture,  0 depth cloud will be gray, 1 depth cloud will be colored;
 #Note that textured and colored depth cloud will slow down whole system
 
 depth_estimate_baseline: 0.05
