@@ -10,6 +10,19 @@ It gives a more comprehensive verison to build VINS-Fisheye in Jetson Xavier NX 
 
 [Install OpenCV 3.4.1 CUDA  in Jetson Xavier NX](https://www.jetsonhacks.com/2018/11/08/build-opencv-3-4-on-nvidia-jetson-agx-xavier-developer-kit/)
 
+*Update 2021.06.03
+
+Set the ceres to version 1.10.0
+
+Build the opencv 3.4.1 with cuda 
+```
+cmake -D CMAKE_BUILD_TYPE=RELEASE       -D CMAKE_C_COMPILER=gcc-7       -D CMAKE_CXX_COMPILER=g++-7       -D CMAKE_INSTALL_PREFIX=/usr/local       -D OPENCV_GENERATE_PKGCONFIG=YES       -D WITH_CUDA=ON       -D OPENCV_DNN_CUDA=ON       -D WITH_CUDNN=ON       -D CUDA_ARCH_BIN=7.5       -D CUDA_ARCH_PTX=""       -D ENABLE_FAST_MATH=ON       -D CUDA_FAST_MATH=ON       -D WITH_CUBLAS=ON       -D WITH_LIBV4L=ON       -D WITH_GSTREAMER=ON       -D WITH_GSTREAMER_0_10=OFF       -D WITH_QT=ON       -D WITH_OPENGL=ON       -D BUILD_opencv_cudacodec=OFF       -D CUDA_NVCC_FLAGS="--expt-relaxed-constexpr"       -D WITH_TBB=ON       -D OPENCV_EXTRA_MODULES_PATH=/home/jiaping/opencv_contrib/modules       ../
+
+time make -j1
+
+sudo ln -s /usr/lib/python2.7/dist-packages/vtk/libvtkRenderingPythonTkWidgets.x86_64-linux-gnu.so /usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so
+sudo ln -s /usr/bin/vtk6 /usr/bin/vtk
+```
 
 *Update 2021.04.13*
 
