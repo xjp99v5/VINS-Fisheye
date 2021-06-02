@@ -12,6 +12,8 @@ It gives a more comprehensive verison to build VINS-Fisheye in Jetson Xavier NX 
 
 *Update 2021.06.03
 
+In laptop AMD 4000 + GTX 1650
+
 Set the ceres to version 1.10.0
 
 Build the opencv 3.4.1 with cuda 
